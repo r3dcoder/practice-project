@@ -26,9 +26,13 @@
                     <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true"
                        aria-expanded="false"> Book</a>
                     <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink1" style=" background-color: #9b0a0d; font-size: 15px;";>
-                        <a class="dropdown-item" href="{{ route('roomBook') }}">Hotel Room</a>
-                        <a class="dropdown-item" href="{{ route('carRent') }}">Rent a car</a>
-
+                        @auth
+                            <a class="dropdown-item" href="{{ route('roomBook') }}">Hotel Room</a>
+                            <a class="dropdown-item" href="{{ route('carRent') }}">Rent a car</a>
+                        @else
+                            <a class="dropdown-item" href="{{ route('login') }}">Hotel Room</a>
+                            <a class="dropdown-item" href="{{ route('login') }}">Rent a car</a>
+                        @endauth
                     </div>
                 </li>
 

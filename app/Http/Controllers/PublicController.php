@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\bookRoom;
 use App\Http\Requests\carRent;
+use App\Http\Requests\RoomRequest;
 use App\Post;
 use App\rent_car;
 use Illuminate\Http\Request;
@@ -42,7 +43,7 @@ class PublicController extends Controller
         return view('carRent');
     }
 
-    public function bookedCar(Request $request){
+    public function bookedCar( carRent $request){
         $post = new rent_car();
         $post->pic_up_location = $request['pic_up_location'];
         $post->pic_up_date = $request['picUpDate'];
@@ -59,7 +60,7 @@ class PublicController extends Controller
         return view('roomBook');
     }
 
-    public function roomBooked(Request $request){
+    public function roomBooked(RoomRequest $request){
         $post = new bookRoom();
         $post->pic_up_date = $request['picUpDate'];
         $post->return_date = $request['returnDate'];

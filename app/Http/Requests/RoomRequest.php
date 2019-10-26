@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class carRent extends FormRequest
+class RoomRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,10 +26,9 @@ class carRent extends FormRequest
         return [
             //
             'mobile'=>'required',
-            'carType'=>'required',
+            'roomType'=>'required',
             'returnDate'=>'required',
             'picUpDate'=>'required',
-
         ];
     }
 }

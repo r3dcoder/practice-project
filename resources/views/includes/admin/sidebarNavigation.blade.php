@@ -52,7 +52,7 @@
 
             <li class="nav-item">
                 <a href="{{ route('adminPosts') }}" class="nav-link {{ Route::currentRouteName()=='adminPosts' ? 'active': ''}}">
-                    post
+                    Car Reservation
                 </a>
             </li>
             <li class="nav-item">
